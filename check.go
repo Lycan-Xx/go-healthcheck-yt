@@ -16,7 +16,7 @@ func Check(destination string, port string) string {
 	if err != nil {
 		status = fmt.Sprintf("[DOWN] %v is unreachable, \n Error: %v", destination, err)
 	} else {
-		status = fmt.Sprintf("[UP] %v is reachable,\n  From: %\n To: %v", destination,
+		status = fmt.Sprintf("[UP] %v is reachable,\n  From: %v To: %v", destination,
 			conn.LocalAddr(), conn.RemoteAddr())
 	}
 	return status
